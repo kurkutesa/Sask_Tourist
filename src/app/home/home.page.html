@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Sopan's Travel Sites
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let site of (siteList | async)" class="welcome-card">
+      <ion-img [src]="site.image"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{site.name}}</ion-card-title>
+      </ion-card-header>    
+    </ion-card>
+</ion-content>
